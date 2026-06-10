@@ -1,63 +1,66 @@
 @import url('https://fonts.cdnfonts.com/css/pacaembu-trial');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/times-new-roman');
 @import "tailwindcss";
 
+/* 1. Global Theme Definition (Fonts & Animations) */
+@theme {
+  /* Font Families (Generates text-pacaembu, text-arimo, text-serif) */
+  --font-pacaembu: "Pacaembu Trial", sans-serif;
+  --font-arimo: "Arimo", sans-serif;
+  --font-serif: "Times New Roman", serif;
 
-:root {
-  font-family: "Pacaembu Trial", sans-serif;
-  background-color: var(--color-bg);
+  /* Animation: fade-in-up */
+  --animate-fade-in-up: fadeUp 0.6s ease-out forwards;
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(40rem); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
 
+  /* Animation: translate-up */
+  --animate-translate-up: translateUp 0.8s ease-out 1s forwards;
+  @keyframes translateUp {
+    0% { transform: translateY(0rem); }
+    70% { transform: translateY(-13.5rem); }
+    80% { transform: translateY(-13.5rem); }
+    100% { transform: translateY(-12rem); }
+  }
+
+  /* Animation: shrink */
+  --animate-shrink: shrink 0.6s ease-out 1s forwards;
+  @keyframes shrink {
+    0% { width: 75%; }
+    70% { width: 64.5%; }
+    80% { width: 64.5%; }
+    100% { width: 65%; }
+  }
+
+  --animate-drop: drop 0.6s ease-out forwards;
+  @keyframes drop {
+    0% { transform: translateY(-40rem);}
+    70% { transform: translateY(2rem); }
+    80% { transform: translateY(2rem); }
+    100% { transform: translateY(0); }
+  }
 }
-@theme  light{
+
+/* 2. Color Variants (Light / Dark Modes) */
+@theme light {
   --color-pinky: #FF3730;
   --color-bg: #FFFFFF;
   --color-text: #000000;
 }
 
-
-@theme  dark{
+@theme dark {
   --color-pinky: #FF3730;
   --color-bg: #000000;
   --color-text: #FFFFFF;
 }
 
-
-@theme {
-  /* Definisci l'animazione */
-  --animate-fade-in-up: fadeUp 0.6s ease-out forwards;
-
-  /* Definisci i keyframes */
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40rem); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
+/* 3. Global Application Styles */
+:root {
+  /* Apply the theme variables as defaults for the document */
+  font-family: var(--font-pacaembu); 
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
-
-
-
-@theme {
-  /* Definisci l'animazione */
-  --animate-translate-up: translateUp 0.8s ease-out 1s forwards;
-
-  /* Definisci i keyframes */
-  @keyframes translateUp {
-    0% { transform: translateY(0rem);  }
-    70% { transform: translateY(-13.5rem);  }
-    80% { transform: translateY(-13.5rem);  }
-    100% { transform: translateY(-12rem);  }
-  }
-}
-
-@theme{
-  /* shrink animation */
-  --animate-shrink: shrink 0.6s ease-out 1s forwards;
-
-  @keyframes shrink {
-    0% { width: 75%;  }
-    70% { width: 64.5%;  }
-    80% { width: 64.5%;  }
-    100% { width: 65%;  }
-  }
-}
-
-
-

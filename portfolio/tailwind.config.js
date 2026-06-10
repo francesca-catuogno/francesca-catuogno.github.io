@@ -9,6 +9,7 @@ export default {
     extend: {
       fontFamily: {
         'pacaembu': ['"Pacaembu Trial"', 'sans-serif'],
+        'arimo': ['"Arimo"', 'sans-serif'],
       },
     },
   plugins: [],

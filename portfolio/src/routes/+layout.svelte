@@ -19,10 +19,10 @@
 
 {#if isOpen}
 
-<div id="menu" class="h-screen w-full fixed z-50 absolute top-36 left-0 mt-auto flex flex-col justify-evenly items-center bg-pinky text-white py-6">
+<div id="menu" class="h-[100vh] w-full fixed z-50 absolute top-36 left-0 mt-auto flex flex-col justify-evenly items-center bg-pinky text-white py-6">
 	<a href="/whoami" class="text-white/60 hover:text-white transition-colors text-4xl" onclick={toggleMenu}>CHI SONO</a>
 	<a href="/projects" class="text-white/60 hover:text-white transition-colors text-4xl" onclick={toggleMenu}>PROGETTI</a>
-	<a href="/gallery" class="text-white/60 hover:text-white transition-colors text-4xl" onclick={toggleMenu}>GALLERIA FOTO</a>
+	<a href="https://www.instagram.com/ennesimoprofiloconlefoto_?igsh=MW8wdzNncG9neTN6bw%3D%3D" class="text-white/60 hover:text-white transition-colors text-4xl" onclick={toggleMenu}>GALLERIA FOTO</a>
 	<div class="flex justify-between w-full">
 		<div class="flex flex-col justify-evenly ml-10 items-center">
 			<p>(contatti ↗)</p>
@@ -37,7 +37,7 @@
 
 {/if}
 
-<div id="navbar" class="fixed absolute z-50 h-36 w-full flex justify-between place-items-center  {isOpen ? 'bg-pinky' : 'bg-black rounded-b-3xl'} place-items-center">
+<div id="navbar" class="fixed absolute z-50 h-36 w-full flex justify-between {isOpen ? 'bg-pinky' : 'bg-black rounded-b-3xl'} place-items-center">
 	
 	<!-- logo -->
 	{#if !isOpen}
@@ -72,6 +72,7 @@
 	{/if}
 
 </div>
+
 
 <main class="pt-36">
 	{@render children()}
