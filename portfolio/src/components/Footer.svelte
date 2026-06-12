@@ -1,20 +1,19 @@
 <script>
     import Coockie from "$lib/assets/coockie.png"
     import Link from "./Link.svelte"
-    let { isDark = false } = $props();
 </script>
 
 
-<div class="{isDark ? 'bg-black' : 'bg-white'} {isDark ? 'text-white' : 'text-black'} w-full h-auto p-24">
+<div class=" w-full h-auto p-24">
     
     
-    <div class="w-full h-[2px] {isDark ? 'bg-white' : 'bg-black'} mb-16"></div>
+    <div class="w-full h-[2px] mb-16 bg-fg"></div>
 
     <div class="font-pacaembu font-extralight font text-5xl mb-8">
         Grazie per essere arrivat* fino a qui, 
     </div>
 
-    <div class="font-pacaembu text-8xl group cursor-pointer w-full mb-16">
+    <div class="font-pacaembu text-8xl group cursor-pointer mb-16">
         <a href="https://tr.ee/0LVNr0QH16" class="items-center gap-6">
             
             <!-- Testo con transizione di colore -->
@@ -38,17 +37,16 @@
         </a>
     </div>
 
-    <div class="flex h-24 items-center justify-center">
+    <div class="flex items-center justify-center">
         <Link
-            color = "white/60"
             href = "https://www.linkedin.com/in/francesca-catuogno-317b422b3"
         >
             Linkedin
         </Link>
 
-        <div class="bg-white m-4 w-4 h-4 rounded-full"></div>
+        <div class="m-4 rounded-full w-[16px] h-[16px] bg-fg"></div>
+
         <Link
-            color = "white/60"
             href = "https://linktr.ee/francesca_catuogno"
         >
             Linktr.ee

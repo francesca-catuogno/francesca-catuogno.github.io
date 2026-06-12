@@ -1,3 +1,11 @@
-<p class="text-red100 size-lvw">projects</p>
+<script>
+    import Footer from "../../components/Footer.svelte";
+
+</script>
+<p class="size-lvw">projects</p>
+
+
+
+<Footer/>
 
 

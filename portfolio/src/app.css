@@ -45,16 +45,29 @@
 }
 
 /* 2. Color Variants (Light / Dark Modes) */
-@theme light {
-  --color-pinky: #FF3730;
-  --color-bg: #FFFFFF;
-  --color-text: #000000;
-}
-
-@theme dark {
+@theme{
   --color-pinky: #FF3730;
   --color-bg: #000000;
   --color-text: #FFFFFF;
+  --color-fg: var(--color-text);
+}
+
+.light {
+  --color-pinky: #FF3730;
+  --color-bg: #FFFFFF;
+  --color-fg: #000000;
+  --color-text: #000000;
+}
+
+
+
+h1{
+  margin-bottom: 4rem;
+}
+
+p{
+  width: calc(0.65 * 100%);
+  font-family: var(--font-arimo);
 }
 
 /* 3. Global Application Styles */
