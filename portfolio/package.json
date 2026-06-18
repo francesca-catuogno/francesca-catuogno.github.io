@@ -12,6 +12,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
+		"@humanspeak/svelte-headless-table": "^6.0.10",
 		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/adapter-netlify": "^6.0.4",
 		"@sveltejs/adapter-static": "^3.0.10",
@@ -27,5 +28,8 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.3.0"
+	},
+	"allowScripts": {
+		"@humanspeak/svelte-headless-table@6.0.10": true
 	}
 }

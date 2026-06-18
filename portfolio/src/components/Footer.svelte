@@ -4,25 +4,25 @@
 </script>
 
 
-<div class=" w-full h-auto p-24">
+<div class=" w-full h-auto p-4 xl:p-24">
     
     
     <div class="w-full h-[2px] mb-16 bg-fg"></div>
 
-    <div class="font-pacaembu font-extralight font text-5xl mb-8">
+    <div class="font-pacaembu font-extralight font text-3xl xl:text-5xl mb-8">
         Grazie per essere arrivat* fino a qui, 
     </div>
 
-    <div class="font-pacaembu text-8xl group cursor-pointer mb-16">
+    <div class="font-pacaembu text-4xl xl:text-8xl group cursor-pointer mb-16">
         <a href="https://tr.ee/0LVNr0QH16" class="items-center gap-6">
             
             <!-- Testo con transizione di colore -->
-            <span class="group-hover:text-pinky transition-colors duration-300 w-3/4">
+            <span class="group-hover:text-pinky transition-colors duration-300 w-3/4 underline xl:no-underline">
                 SCAMBIAMO DUE
             </span>
             
             <div class="flex items-center">
-                <span class="group-hover:text-pinky transition-colors duration-300 w-auto">
+                <span class="group-hover:text-pinky transition-colors duration-300 w-auto underline xl:no-underline">
                     CHIACCHIERE!
                 </span>
                 <!-- Immagine trattata come un'emoji -->
