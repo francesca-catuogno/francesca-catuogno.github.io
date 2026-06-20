@@ -5,7 +5,7 @@
 <div class="flex flex-col xl:flex-row gap-12 p-8 xl:p-16 w-full">
 
     <div class="w-full xl:w-96 shrink-0">
-        <h2 class="text-3xl md:text-4xl xl:text-5xl font-light tracking-wide uppercase break-words leading-tight text-black">
+        <h2 class="text-3xl md:text-4xl xl:text-5xl font-light tracking-wide uppercase wrap-break-words leading-tight text-black">
             {mainTitle}
         </h2>
     </div>

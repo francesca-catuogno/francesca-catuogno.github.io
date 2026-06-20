@@ -1,5 +1,6 @@
 <script lang="ts">
     import Footer from "../../components/Footer.svelte";
+    import Link from "../../components/Link.svelte";
     import Table from "../../components/Table.svelte";
 
     // Dati Tabella 1
@@ -24,6 +25,21 @@
         }
     ];
 
+    const curriculari = [
+        {
+        title: "Service Designer",
+        where: "Sviluppo in team di un'idea progettuale per il bando FUTURA+ promosso dal Fondo Repubblica Digitale. Proposta elaborata a partire dalla ricerca condotta in parallelo per il percorso di tesi magistrale.",
+        comment: "DISI e DA, Alma Mater Studiorum — Università di Bologna",
+        duration: "dicembre 2025"
+        },
+        {
+        title: "Service Designer",
+        where: "Progettazione di format educativi per la promozione delle pratiche del circular design nelle scuole secondarie di II grado. Tirocinio legato ai progetti POTNEED e CIRCES.",
+        comment: "Advanced Design Unit, DA, Alma Mater Studiorum — Università di Bologna",
+        duration: "febbraio — giugno 2025"
+        },
+    ]
+
     const extra = [
         {
         title: "Service Designer freelance",
@@ -46,8 +62,26 @@
         {
         title: "Bibliotecaria",
         where: "Collaborazione studentesca (150H) presso la Biblioteca Biomedica, registrazione e rientro prestiti",
-        comment: "Commonground srl",
-        duration: "dicembre 2025"
+        comment: "Alma Mater Studiorum — Università di Bologna",
+        duration: "ottobre — dicembre 2025"
+        },
+        {
+        title: "UX/UI Designer",
+        where: "Workshop: AI collaborative experience",
+        comment: "Technogym",
+        duration: "luglio 2024"
+        },
+        {
+        title: "Student tutor",
+        where: "Assistente nell’ambito dell’insegnamento di Urban Design, modulo di Architettura e installazioni temporanee",
+        comment: "Università degli Studi di Perugia",
+        duration: "febbraio — giugno 2023"
+        },
+        {
+        title: "Consigliere di vendita",
+        where: "Consigliere di vendita per i reparti di Decorazione, Illuminazione e Vernici",
+        comment: "Leroy Merlin Italia srl",
+        duration: "marzo 2022 — settembre 2023"
         },
         {
         title: "Bibliotecaria",
@@ -56,29 +90,24 @@
         duration: "dicembre 2025"
         },
         {
-        title: "Bibliotecaria",
-        where: "Collaborazione studentesca (150H) presso la Biblioteca Biomedica, registrazione e rientro prestiti",
-        comment: "Commonground srl",
-        duration: "dicembre 2025"
+        title: "Rappresentante studentɘ",
+        where: "Rappresentante del CdL in Design",
+        comment: "Università degli Studi di Perugia",
+        duration: "dicembre 2021 — febbraio 2023"
         },
         {
-        title: "Bibliotecaria",
-        where: "Collaborazione studentesca (150H) presso la Biblioteca Biomedica, registrazione e rientro prestiti",
-        comment: "Commonground srl",
-        duration: "dicembre 2025"
+        title: "Volontaria FAI",
+        where: "Addetta all’accoglienza. Bosco di San Francesco, Assisi",
+        comment: "FAI - Fondo Ambiente Italiano",
+        duration: "dicembre 2016 — agosto 2017"
         },
-        {
-        title: "Bibliotecaria",
-        where: "Collaborazione studentesca (150H) presso la Biblioteca Biomedica, registrazione e rientro prestiti",
-        comment: "Commonground srl",
-        duration: "dicembre 2025"
-        }
+
     ];
 
 </script>
 
 <div class="size-lvw px-6 md:px-24 w-full h-auto">
-    <h1 class="text-center font-pacaembu text-8xl">
+    <h1 class="text-center font-pacaembu text-6xl xl:text-8xl mb-16 xl:mb-24">
         CHI SONO
     </h1>
 
@@ -114,11 +143,99 @@
 
  
 </div>
-<Table mainTitle={"ISTRUZIONE"} dataTable={studi}/>
-<Table mainTitle={"ESPERIENZE\n&EXTRA\nCURRUCULARI"} dataTable={extra}/>
-<Table mainTitle={"ISTRUZIONE"} dataTable={studi}/>
-<Table mainTitle={"ISTRUZIONE"} dataTable={studi}/>
+<Table mainTitle={"istruzione"} dataTable={studi}/>
+<Table mainTitle={"curricolari"} dataTable={curriculari}/>
+<Table mainTitle={"esperienze Lavorative \n& extra — curriculari"} dataTable={extra}/>
 
+
+<!-- aggiunta -->
+<div class="flex flex-col xl:flex-row gap-12 p-8 xl:p-16 w-full">
+    <div class="w-full xl:w-96 shrink-0"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 flex-1 gap-x-12 gap-y-16 items-start">
+
+        <!-- soft skills-->
+
+        <div class="flex flex-col justify-between min-w-0 h-full">
+            
+            <div class="flex flex-col flex-grow">
+                <h3 class="text-xl 2xl:text-2xl font-pacaembu font-normal  min-h-[3rem] xl:min-h-[4rem] break-words leading-snug">
+                    LINGUE
+                </h3>
+                
+                <div class="mb-8 flex-grow">
+                    <p class="text-lg xl:text-[1.3rem] font-arimo font-normal leading-relaxed mb-1 break-words text-grayy">
+                        Italiano, madrelingua<br>
+                        Inglese, IELTS 6<br>
+                        (equivalente B2 Cambridge)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- soft skills-->
+
+        <div class="flex flex-col justify-between min-w-0 h-full">
+            
+            <div class="flex flex-col flex-grow">
+                <h3 class="text-xl 2xl:text-2xl font-pacaembu font-normal min-h-[3rem] xl:min-h-[4rem] break-words leading-snug">
+                    SOFT SKILLS
+                </h3>
+                
+                <div class="mb-8 flex-grow">
+                    <p class="text-lg xl:text-[1.3rem] font-arimo font-normal leading-relaxed mb-1 break-words text-grayy">
+                        Empatia<br>
+                        Capacità comunicative<br>
+                        Pensiero critico<br>
+                        Creatività<br>
+                        Adattabilità<br>
+                        Pensiero sistemico<br>
+                        Collaborazione<br>
+                        Problem framing<br>
+                        Azione collettiva<br>
+                        Iniziativa individuale
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- interessi-->
+
+        <div class="flex flex-col justify-between min-w-0 h-full">
+            
+            <div class="flex flex-col flex-grow">
+                <h3 class="text-xl 2xl:text-2xl font-pacaembu font-normal min-h-[3rem] xl:min-h-[4rem] break-words leading-snug">
+                    INTERESSI
+                </h3>
+                
+                <div class="mb-8 flex-grow">
+                    <p class="text-lg xl:text-[1.3rem] font-arimo font-normal leading-relaxed mb-1 break-words text-grayy">
+                        Fotografia<br>
+                        Lettura<br>
+                        Cucina<br>
+                        Bigiotteria<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+
+<div class="w-full flex flex-col md:flex-row gap-5 justify-around items-center p-4 md:p-24">
+    <div class="text-xl xl:text-[2rem] font-pacaembu font-light ">
+        ancora più breve? 
+    </div>
+    <Link
+        href={"https://ugc.production.linktr.ee/4a187a64-3a3e-4def-8512-77994df83462_FrancescaCatuogno-CV-op.pdf"}
+        isUnderline={true}
+        isBig={false}
+        font='pacaembu'
+        color='black'>
+        scarica il mio CV
+    </Link>
+</div>
 
 
 <Footer/>

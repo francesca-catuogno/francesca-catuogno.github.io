@@ -4,7 +4,7 @@
 </script>
 
 
-<div class=" w-full h-auto p-4 xl:p-24">
+<div class=" w-full h-auto p-4 xl:p-24 z-50 ">
     
     
     <div class="w-full h-[2px] mb-16 bg-fg"></div>
@@ -40,6 +40,7 @@
     <div class="flex items-center justify-center">
         <Link
             href = "https://www.linkedin.com/in/francesca-catuogno-317b422b3"
+            isBig = {true}
         >
             Linkedin
         </Link>
@@ -48,6 +49,7 @@
 
         <Link
             href = "https://linktr.ee/francesca_catuogno"
+            isBig = {true}
         >
             Linktr.ee
         </Link>
