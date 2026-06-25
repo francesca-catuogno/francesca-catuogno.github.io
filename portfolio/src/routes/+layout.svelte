@@ -7,7 +7,7 @@
 
     // 1. Definiamo isLight come derivato dalla rotta. 
     // Ogni volta che page.url.pathname cambia, isLight viene ricalcolato automaticamente.
-    let isLight = $derived(['/whoami', '/projects'].includes(page.url.pathname));
+	let isLight = $derived(/^(\/whoami|\/projects(\/|$))/.test(page.url.pathname));
 
     // 2. Usiamo $effect per sincronizzare la classe CSS.
     // Questo effetto "osserva" isLight: ogni volta che cambia, esegue il codice dentro.
@@ -33,10 +33,10 @@
 {#if isOpen}
 
 <div id="menu" class="h-[90vh] w-full fixed z-50 absolute top-24 md:top-36 left-0 flex flex-col justify-between items-center bg-pinky text-white xs:p-8 md:p-16 text-center">
-	<a href="/whoami" class="text-white/60 hover:text-white transition-colors text-4xl" onclick={toggleMenu}>CHI SONO</a>
-	<a href="/projects" class="text-white/60 hover:text-white transition-colors text-4xl" onclick={toggleMenu}>PROGETTI</a>
+	<a href="/whoami" class="text-white/60 hover:text-white transition-colors  text-5xl md:text-7xl" onclick={toggleMenu}>CHI SONO</a>
+	<a href="/projects" class="text-white/60 hover:text-white transition-colors text-5xl md:text-7xl" onclick={toggleMenu}>PROGETTI</a>
 	<div class="bg-pinky"></div>
-	<a href="https://www.instagram.com/ennesimoprofiloconlefoto_?igsh=MW8wdzNncG9neTN6bw%3D%3D" class="text-white/60 hover:text-white transition-colors text-4xl" onclick={toggleMenu}>GALLERIA FOTO</a>
+	<a href="https://www.instagram.com/ennesimoprofiloconlefoto_?igsh=MW8wdzNncG9neTN6bw%3D%3D" class="text-white/60 hover:text-white transition-colors text-5xl md:text-7xl" onclick={toggleMenu}>GALLERIA FOTO</a>
 	<div class="flex flex-row justify-between w-full p-4">
 		<div class="flex flex-col justify-evenly items-center font-pacaembu text-center">
 			<p>(contatti ↗)</p>
@@ -73,13 +73,17 @@
 
 </div>
 <!-- riporta su -->
-<button class="fixed bottom-8 right-8 xl:bottom-16 xl:right-16 w-14 h-14 md:w-18.25 md:w-18.25 z-40 cursor-pointer transition animate-drop" onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} type="button" aria-label="Torna su" >
+<button 
+    class="fixed bottom-8 right-8 xl:bottom-16 xl:right-16 w-14 h-14 md:w-18 md:h-18 z-40 cursor-pointer transition  backdrop-blur-sm animate-drop rounded-full {isLight ? 'mix-blend-difference' : ''}" 
+    onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+    type="button" 
+    aria-label="Torna su"
+>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 73" fill="none">
-        <circle cx="36.5" cy="36.5" r="36.1" fill="white" fill-opacity="0.1" stroke="{isLight ? 'black' : 'white'}" stroke-width="0.8"/>
-        <path d="M34.8859 23.954C30.18 29.6032 24.759 37.7318 17.2569 38.6053C16.5272 33.929 18.1971 35.153 20.8414 33.2804C27.6286 28.4629 33.0496 21.4537 35.1847 12.9433L38.8035 12.9799C39.8955 22.4266 48.3575 31.685 56.3689 35.017L56.4326 38.6105C48.6758 37.669 43.1765 29.8438 38.3187 23.9644V60.5745H34.8859V23.9592V23.954Z" fill="{isLight ? 'black' : 'white'}"/>
+        <circle cx="36.5" cy="36.5" r="36.1" fill="white" fill-opacity="0.1" stroke="white" stroke-width="1.5"/>
+        <path d="M34.8859 23.954C30.18 29.6032 24.759 37.7318 17.2569 38.6053C16.5272 33.929 18.1971 35.153 20.8414 33.2804C27.6286 28.4629 33.0496 21.4537 35.1847 12.9433L38.8035 12.9799C39.8955 22.4266 48.3575 31.685 56.3689 35.017L56.4326 38.6105C48.6758 37.669 43.1765 29.8438 38.3187 23.9644V60.5745H34.8859V23.9592V23.954Z" fill="white"/>
     </svg>
 </button>
-
 
 <main class="absolute top-24 md:top-36 left-0 bg-bg text-fg w-full">
 	{@render children()}
