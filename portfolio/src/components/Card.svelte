@@ -1,45 +1,63 @@
 <script>
-  // Proprietà (Props) modulari e personalizzabili
-  let {comment = '', title, children} = $props();
-  
-  // Stato interno per gestire il click / espansione del testo
-  let isExpanded = $state(false);
-
-  function toggleCard() {
-    isExpanded = !isExpanded;
-  }
+    let {
+        title = null,
+        image = null,
+        description = null,
+        leftText = null,
+        rightText = null,
+        isRed = false
+    } = $props();
 </script>
 
 <div 
-  on:click={toggleCard}
-  class="w-[19rem] rounded-[24px] cursor-pointer flex flex-col border-transparent border-2 border-transparent hover:border-pinky  justify-between select-none
-    {isExpanded 
-      ? 'bg-pinky' 
-      : ' bg-white'}"
+    class="
+        border-pinky border-[3px] rounded-3xl p-4 w-full
+        transition-all duration-500 shadow-md text-arimo
+        {isRed ? 'bg-pinky' : 'bg-[#F2F2F2]'}
+    "
 >
-  
-    <div class="flex flex-col justify-between p-[1rem] h-full">
-        <h2 class="text-[1.5rem] font-normal uppercase">
-        {title}
-        </h2>
-        <div class="text-base flex text-[1.1rem] flex-col gap-4 animate-fade-in {isExpanded? '': 'text-white'}">
-                {@render children()}
+
+    {#if image}
+        <div class="h-[18rem] overflow-hidden rounded-2xl ">
+            <img
+                src={image}
+                alt={title ?? 'Card image'}
+                class="w-full h-full object-cover"
+            />
         </div>
-            
-        <div class="flex items-center gap-1 text-xs font-medium tracking-wider uppercase opacity-80 {isExpanded? 'text-pinky': ''}">
-        {comment} <span class="text-sm font-light">+</span>
+    {/if}
+
+
+    {#if title}
+        <div class="text-xl mt-3 font-semibold">
+            {title}
         </div>
-    </div>
+    {/if}
+
+
+    {#if description}
+        <div class="text-xl mt-3">
+            {@html description}
+        </div>
+    {/if}
+
+
+    {#if leftText || rightText}
+        <div class="flex justify-between items-center mt-3">
+
+            {#if leftText}
+                <div class="text-sm md:text-xl {isRed ? 'text-black' : 'text-pinky'} uppercase font-bold underline">
+                    {leftText}
+                </div>
+            {/if}
+
+            {#if rightText}
+                <div class="text-sm md:text-xl text-normal ">
+                    {rightText}
+                </div>
+            {/if}
+
+        </div>
+    {/if}
+
 </div>
-
-<style>
-  /* Piccola animazione per rendere la comparsa del testo più fluida */
-  .animate-fade-in {
-    animation: fadeIn 0.25s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>

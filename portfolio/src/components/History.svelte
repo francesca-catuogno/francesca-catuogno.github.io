@@ -3,10 +3,10 @@
 </script>
 
 
-<div class="px-8 md:px-16 flex justify-between text-[1.75rem] font-normal font-arimo">
-    <div>
+<div class="px-5 md:px-16 flex justify-between text-sm md:text-[1.75rem] font-normal font-arimo">
+    <a href="/projects/" class=" hover:text-pinky hover:underline xl:no-underline underline transform duration-300">
         progetti
-    </div>
+    </a>
     <div class="ml-4 text-bold">
         >
     </div>

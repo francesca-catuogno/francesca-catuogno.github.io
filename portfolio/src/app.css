@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/pacaembu-trial');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/times-new-roman');
+@import url('https://fonts.cdnfonts.com/css/neue-montreal');
 @import "tailwindcss";
 
 /* 1. Global Theme Definition (Fonts & Animations) */
@@ -9,6 +10,7 @@
   --font-pacaembu: "Pacaembu Trial", sans-serif;
   --font-arimo: "Arimo", sans-serif;
   --font-serif: "Times New Roman", serif;
+  --font-montreal: "Neue Montreal", sans-serif;
 
   /* Animation: fade-in-up */
   --animate-fade-in-up: fadeUp 2s ease-out 2s forwards;

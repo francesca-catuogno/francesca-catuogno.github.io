@@ -1,6 +1,8 @@
 <script>
     import Footer from "../../../components/Footer.svelte";
     import History from "../../../components/History.svelte";
+    import Carousel from "../../../components/Carousel.svelte";
+    import SlideShowPreview from "../../../components/SlideShowPreview.svelte";
 </script>
 
 <History
@@ -10,5 +12,9 @@
     serious games   |    futuri prospettici    |    processi partecipativi
 </div>
 
+
+<SlideShowPreview photos={[]}/>
+
+<Carousel />
 
 <Footer/>
