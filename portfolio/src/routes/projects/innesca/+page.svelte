@@ -142,7 +142,7 @@
             title="INTERVISTE"
             comment="DISCOVER">
                 <p>Interviste semi-strutturate per comprendere le cause della sfiducia che molti giovani vivono nei confronti del lavoro.</p>
-                <p>Ariberto Vergnani (<strong>psicologo del lavoro</strong>) & Erika Mancinelli (<strong>HR APL Mediawork Perugia</strong>)</p>
+                <p><strong>psicologo del lavoro</strong> & <strong>HR APL Mediawork Perugia</strong></p>
         </TextCard>
         <TextCard
             title="SVILUPPO SERVIZIO"
